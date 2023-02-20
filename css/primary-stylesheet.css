@@ -1,0 +1,80 @@
+body {
+  background-color: #f5f5f5;
+  color: #000000;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Source Code Pro", monospace;
+  font-weight: 900;
+}
+
+h1 {
+  font-size: 60px;
+}
+
+h2 {
+  font-size: 35px;
+}
+
+h3 {
+  font-size: 22px;
+  color: #717171;
+}
+
+p {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-size: 17px;
+  color: #000000;
+}
+
+.header-with-image {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header-with-image * {
+  color: #ffffff;
+}
+.header-with-image p {
+  font-size: 25px;
+  font-weight: 600;
+}
+
+ul.large-list {
+  list-style: none;
+  padding: 0;
+}
+ul.large-list .large-list-element li {
+  padding: 0;
+}
+ul.large-list .large-list-element p:first-child {
+  font-family: "Source Code Pro", monospace;
+  font-weight: 800;
+  font-size: 60px;
+  margin-bottom: 0;
+}
+ul.large-list .large-list-element h4 {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  font-size: 45px;
+}
+ul.large-list .large-list-element p {
+  margin-top: 15px;
+}
+
+.container-fluid > div,
+.container-fluid ul {
+  margin: 0 auto;
+}
+
+.container-narrow > div,
+.container-narrow ul {
+  max-width: 800px;
+}/*# sourceMappingURL=primary-stylesheet.css.map */
