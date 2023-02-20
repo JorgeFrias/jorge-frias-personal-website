@@ -39,52 +39,29 @@ p {
 
 // - Lists
 
-// Specific elements
-// - Header with image
-.header-with-image {
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  min-height: 80vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  // High contrast text
-  * {
-    color: #ffffff;
-  }
-
-  p {
-    font-size: 25px;
-    font-weight: 600;
-  }
-}
-
 // - Large list
 ul {
   &.large-list {
     list-style: none;
     padding: 0;
 
-    .large-list-element {
-      li {
-        padding: 0;
-      }
-      // first child of type p
-      p:first-child {
-        font-family: "Source Code Pro", monospace;
-        font-weight: 800;
-        font-size: 60px;
-        margin-bottom: 0;
-      }
-      h4 {
-        font-family: "Open Sans", sans-serif;
-        font-weight: 700;
-        font-size: 45px;
-      }
-      p {
-        margin-top: 15px;
+    li {
+      > div {
+        // first child of type p
+        p:first-child {
+          font-family: "Source Code Pro", monospace;
+          font-weight: 800;
+          font-size: 60px;
+          margin-bottom: 0;
+        }
+        h4 {
+          font-family: "Open Sans", sans-serif;
+          font-weight: 700;
+          font-size: 45px;
+        }
+        p {
+          margin-top: 15px;
+        }
       }
     }
   }
@@ -97,6 +74,12 @@ ul {
   ul {
     margin: 0 auto;
   }
+
+  margin-top: 150px;
+
+  img {
+    width: 100%;
+  }
 }
 
 // Layout
@@ -105,5 +88,30 @@ ul {
   > div,
   ul {
     max-width: 800px;
+  }
+}
+
+// Specific elements
+// - Header with image
+.header-with-image {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  // Override margin
+  margin-top: 0;
+
+  // High contrast text
+  * {
+    color: #ffffff;
+  }
+
+  p {
+    font-size: 25px;
+    font-weight: 600;
   }
 }
