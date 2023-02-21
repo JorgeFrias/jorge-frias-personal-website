@@ -24,6 +24,17 @@ h1 {
   }
 }
 
+.h1-subtitle {
+  font-size: 20px;
+  font-weight: 600;
+  padding-top: 8px;
+}
+@media (min-width: 992px) {
+  .h1-subtitle {
+    font-size: 22px;
+  }
+}
+
 h2 {
   font-size: 35px;
 }
@@ -263,11 +274,14 @@ img.darken-image {
   padding: 0 60px;
 }
 .portfolio-element.row .portfolio-element-main-image {
-  max-width: 400px;
+  max-width: 350px;
   margin: 0 auto;
 }
 .portfolio-element.row .portfolio-element-main-image img {
   margin-top: 50px;
+}
+.portfolio-element-text {
+  padding: 60px 0;
 }
 .portfolio-element-icon {
   display: flex;
@@ -296,4 +310,11 @@ img.darken-image {
 }
 .portfolio-element-action {
   margin-top: 45px;
+}
+
+.photo-gallery [class^=col-] {
+  padding: 4px;
+}
+.photo-gallery-image {
+  margin-bottom: 8px;
 }/*# sourceMappingURL=primary-stylesheet.css.map */

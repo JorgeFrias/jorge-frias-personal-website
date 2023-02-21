@@ -38,6 +38,18 @@ h1 {
   }
 }
 
+.h1-subtitle {
+  font-size: 20px;
+  font-weight: 600;
+  padding-top: 8px;
+
+    // For sizes smaller than md
+    @media (min-width: $screen-md) {
+      font-size: 22px;
+    }
+  
+}
+
 h2 {
   font-size: 35px;
 
@@ -366,7 +378,7 @@ img.darken-image {
 
   &.row {
     .portfolio-element-main-image {
-      max-width: 400px;
+      max-width: 350px;
       // center contents
       margin: 0 auto;
 
@@ -374,6 +386,11 @@ img.darken-image {
         margin-top: 50px;
       }
     }
+  }
+
+  &-text {
+    //vertical padding
+    padding: $portfolio-element-spacing * 2 0;
   }
 
   &-icon {
@@ -414,4 +431,16 @@ img.darken-image {
   &-action {
     margin-top: $portfolio-element-spacing * 1.5;
   }
+}
+
+.photo-gallery {
+
+  [class^="col-"] {
+    padding: 4px;
+  }
+
+  &-image {
+    margin-bottom: 8px;
+  }
+  
 }
