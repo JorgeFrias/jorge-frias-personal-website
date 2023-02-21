@@ -1,6 +1,7 @@
 $background-color: #f5f5f5;
 $text-color-primary: #000000;
 $text-color-secondary: #717171;
+$text-font-size-p-default: 17px;
 
 // Bootstrap breakpoints definitions
 $screen-xs: 480px;
@@ -14,7 +15,8 @@ body {
 }
 
 // Stop scrolling on mobile
-body, html{
+body,
+html {
   overflow-x: hidden;
 }
 
@@ -29,7 +31,7 @@ h3 {
 
 h1 {
   font-size: 45px;
-  
+
   // For sizes smaller than md
   @media (min-width: $screen-md) {
     font-size: 60px;
@@ -38,6 +40,10 @@ h1 {
 
 h2 {
   font-size: 35px;
+
+  &.small {
+    font-size: 25px;
+  }
 }
 
 h3 {
@@ -49,7 +55,7 @@ h3 {
 p {
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
-  font-size: 17px;
+  font-size: $text-font-size-p-default;
   color: $text-color-primary;
 
   &.annotation {
@@ -96,6 +102,7 @@ ul {
 }
 
 // Bootstrap Further Customization
+// - Layout
 .container-fluid {
   // Center contents
   > div {
@@ -116,13 +123,28 @@ ul {
 }
 
 // Removes the gutter from the column
-// target all Bootstrap5 col-* 
+// target all Bootstrap5 col-*
 [class^="col-"].gx-negative {
   $bootstrap5-gutter: 1.5rem;
 
   & > div {
-    margin-left: - $bootstrap5-gutter;
-    margin-right: - $bootstrap5-gutter;
+    margin-left: -$bootstrap5-gutter;
+    margin-right: -$bootstrap5-gutter;
+  }
+}
+
+// - Buttons
+.btn {
+  font-family: "Source Code Pro", monospace;
+  font-weight: 600;
+  font-size: $text-font-size-p-default;
+  border-radius: 14px;
+  border: 0;
+  padding: 5px 20px;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    transform: scale(1.02);
   }
 }
 
@@ -178,7 +200,7 @@ li {
   }
 
   p {
-    font-size: 25px;
+    font-size: 22px;
     font-weight: 600;
   }
 }
@@ -210,7 +232,6 @@ li {
     @media (min-width: $screen-md) {
       font-size: 60px;
     }
-  
   }
 }
 
@@ -291,4 +312,46 @@ img.darken-image {
   font-family: "Open Sans", sans-serif;
   font-weight: 800;
   font-size: 40px;
+}
+
+// Index
+// - Header with image
+.header-composed {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  // Override margin
+  margin-top: 0;
+
+  // High contrast text
+  * {
+    color: #000;
+  }
+
+  p {
+    font-size: 22px;
+    font-weight: 600;
+  }
+
+  .row {
+    height: 100%;
+  }
+
+  &-text {
+    margin-top: 70px;
+    margin-bottom: 20px;
+  }
+
+  &-bust {
+    // height: 100%;
+    img {
+      max-width: 500px;
+    }
+  }
 }
