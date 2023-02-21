@@ -67,6 +67,10 @@ ul.large-list li > div p {
   width: 100%;
 }
 
+.row:not(:first-child) {
+  margin-top: 40px;
+}
+
 body {
   padding-bottom: 200px;
 }
@@ -83,8 +87,8 @@ body {
   margin: 0 auto;
 }
 
-.subsection > * {
-  margin-top: 40px;
+li:not(:last-child) {
+  margin-bottom: 8px;
 }
 
 .header-with-image {
@@ -136,4 +140,39 @@ img.narrow-image {
 
 img.darken-image {
   filter: brightness(0.3);
+}
+
+.app-screens h4 {
+  font-size: 35px;
+  font-family: "Source Code Pro", monospace;
+  font-weight: 900;
+  text-align: center;
+}
+.app-screens h5 {
+  font-size: 40px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+}
+.app-screens img.device-screenshot {
+  max-width: 60vw;
+}
+.app-screens .centered-screenshot {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.app-screens .centered-screenshot > * {
+  margin-bottom: 25px;
+}
+.app-screens .centered-screenshot > *:last-child {
+  margin-bottom: 0;
+}
+.app-screens .centered-screenshot h5 {
+  text-align: center;
+}
+@media (max-width: 992px) {
+  .app-screens .centered-screenshot {
+    margin-bottom: 50px;
+  }
 }/*# sourceMappingURL=primary-stylesheet.css.map */
