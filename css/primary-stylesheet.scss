@@ -35,9 +35,21 @@ p {
   font-weight: 400;
   font-size: 17px;
   color: $text-color-primary;
+
+  &.annotation {
+    font-style: italic;
+    color: $text-color-secondary;
+  }
 }
 
 // - Lists
+ol {
+  &.bold-numbers {
+    & > li::marker {
+      font-weight: bold;
+    }
+  }
+}
 
 // - Large list
 ul {
@@ -70,8 +82,7 @@ ul {
 // Bootstrap Further Customization
 .container-fluid {
   // Center contents
-  > div,
-  ul {
+  > div {
     margin: 0 auto;
   }
 
@@ -83,11 +94,34 @@ ul {
 }
 
 // Layout
+// - Body
+body {
+  padding-bottom: 200px;
+}
+
 // - Width classes
 .container-narrow {
   > div,
   ul {
     max-width: 800px;
+    // Center contents
+    margin: 0 auto;
+  }
+}
+
+.container-wide {
+  > div,
+  ul {
+    max-width: 1200px;
+    // Center contents
+    margin: 0 auto;
+  }
+}
+
+// - Spacing
+.subsection {
+  & > * {
+    margin-top: 40px;
   }
 }
 
@@ -115,3 +149,42 @@ ul {
     font-weight: 600;
   }
 }
+
+.image-with-text {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  min-height: 500px;
+
+  // High contrast text
+  * {
+    color: #ffffff;
+  }
+
+  .large-text {
+    font-size: 60px;
+    font-weight: 800;
+    font-family: 'Source Code Pro', monospace;
+    padding-right: 100px;
+    padding-left: 100px;
+    margin-bottom: 0;
+  }
+}
+
+// - Image
+img.narrow-image {
+  width: 100%;
+  max-height: 500px;
+  margin: 0 auto;
+  // image preserve aspect ratio
+  object-fit: cover;
+}
+
+img.darken-image {
+  filter: brightness(0.3);
+}
+
