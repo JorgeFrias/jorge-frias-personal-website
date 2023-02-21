@@ -13,6 +13,11 @@ body {
   color: $text-color-primary;
 }
 
+// Stop scrolling on mobile
+body, html{
+  overflow-x: hidden;
+}
+
 // Type definitions
 // - Titles
 h1,
@@ -23,7 +28,12 @@ h3 {
 }
 
 h1 {
-  font-size: 60px;
+  font-size: 45px;
+  
+  // For sizes smaller than md
+  @media (min-width: $screen-md) {
+    font-size: 60px;
+  }
 }
 
 h2 {
@@ -105,6 +115,17 @@ ul {
   }
 }
 
+// Removes the gutter from the column
+// target all Bootstrap5 col-* 
+[class^="col-"].gx-negative {
+  $bootstrap5-gutter: 1.5rem;
+
+  & > div {
+    margin-left: - $bootstrap5-gutter;
+    margin-right: - $bootstrap5-gutter;
+  }
+}
+
 // Layout
 // - Body
 body {
@@ -178,12 +199,18 @@ li {
   }
 
   .large-text {
-    font-size: 60px;
     font-weight: 800;
     font-family: "Source Code Pro", monospace;
-    padding-right: 100px;
-    padding-left: 100px;
+    padding-right: 20%;
+    padding-left: 20%;
     margin-bottom: 0;
+
+    font-size: 40px;
+
+    @media (min-width: $screen-md) {
+      font-size: 60px;
+    }
+  
   }
 }
 
@@ -204,7 +231,7 @@ img.darken-image {
 .app-screens {
   h4 {
     font-size: 35px;
-    font-family: 'Source Code Pro', monospace;
+    font-family: "Source Code Pro", monospace;
     font-weight: 900;
     // Center text
     text-align: center;
@@ -212,7 +239,7 @@ img.darken-image {
 
   h5 {
     font-size: 40px;
-    font-family: 'Open Sans', sans-serif;
+    font-family: "Open Sans", sans-serif;
     font-weight: 700;
   }
 
@@ -226,7 +253,7 @@ img.darken-image {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    
+
     // Space contents 30px but not last element
     > * {
       margin-bottom: 25px;
@@ -239,7 +266,6 @@ img.darken-image {
       text-align: center;
     }
 
-
     // margin bottom for sizes smaller than md
     @media (max-width: $screen-md) {
       margin-bottom: 50px;
@@ -248,7 +274,7 @@ img.darken-image {
 
   .clinical-information {
     background-color: #fff;
-    padding: 0px;
+    // padding: 0px;
 
     img {
       max-width: 500px;
