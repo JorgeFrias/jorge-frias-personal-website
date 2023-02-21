@@ -175,4 +175,15 @@ img.darken-image {
   .app-screens .centered-screenshot {
     margin-bottom: 50px;
   }
+}
+.app-screens .clinical-information {
+  background-color: #fff;
+  padding: 0px;
+}
+.app-screens .clinical-information img {
+  max-width: 500px;
+}
+.app-screens .clinical-information-text {
+  padding-top: 50px;
+  padding-bottom: 50px;
 }/*# sourceMappingURL=primary-stylesheet.css.map */

@@ -215,7 +215,7 @@ img.darken-image {
     font-family: 'Open Sans', sans-serif;
     font-weight: 700;
   }
-  
+
   img.device-screenshot {
     max-width: 60vw;
   }
@@ -245,4 +245,19 @@ img.darken-image {
       margin-bottom: 50px;
     }
   }
+
+  .clinical-information {
+    background-color: #fff;
+    padding: 0px;
+
+    img {
+      max-width: 500px;
+    }
+
+    &-text {
+      padding-top: 50px;
+      padding-bottom: 50px;
+    }
+  }
+
 }
