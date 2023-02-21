@@ -355,3 +355,63 @@ img.darken-image {
     }
   }
 }
+
+.portfolio-element {
+  $portfolio-element-spacing: 30px;
+  $portfolio-element-spacing-reduced: 17px;
+
+  background-color: #fff;
+  // Inner horizontal padding
+  padding: 0 ($portfolio-element-spacing * 2);  
+
+  &.row {
+    .portfolio-element-main-image {
+      max-width: 400px;
+      // center contents
+      margin: 0 auto;
+
+      img {
+        margin-top: 50px;
+      }
+    }
+  }
+
+  &-icon {
+    // Contents inline and centered
+    display: flex;
+    align-items: center;
+    // Spacing
+    margin-bottom: 25px;
+
+    // icon size and style
+    img {
+      width: 90px;
+      border-radius: 25%;
+      margin-right: 20px;
+    }
+
+    h3 {
+      color: #000;
+      font-size: 35px;
+    }
+  }
+
+  &-subtitle {
+    font-family: "Source Code Pro", monospace;
+    font-weight: 900;
+    font-size: 22px;
+    color: $text-color-secondary;
+    margin-bottom: 5px;
+  }
+
+  &-tags {
+    .text-bg-secondary {
+      color: $text-color-secondary !important;
+      background-color: #DBDBDB !important;
+    }
+  }
+
+  &-action {
+    margin-top: $portfolio-element-spacing * 1.5;
+  }
+}

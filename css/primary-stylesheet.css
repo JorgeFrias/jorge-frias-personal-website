@@ -256,4 +256,44 @@ img.darken-image {
 }
 .header-composed-bust img {
   max-width: 500px;
+}
+
+.portfolio-element {
+  background-color: #fff;
+  padding: 0 60px;
+}
+.portfolio-element.row .portfolio-element-main-image {
+  max-width: 400px;
+  margin: 0 auto;
+}
+.portfolio-element.row .portfolio-element-main-image img {
+  margin-top: 50px;
+}
+.portfolio-element-icon {
+  display: flex;
+  align-items: center;
+  margin-bottom: 25px;
+}
+.portfolio-element-icon img {
+  width: 90px;
+  border-radius: 25%;
+  margin-right: 20px;
+}
+.portfolio-element-icon h3 {
+  color: #000;
+  font-size: 35px;
+}
+.portfolio-element-subtitle {
+  font-family: "Source Code Pro", monospace;
+  font-weight: 900;
+  font-size: 22px;
+  color: #717171;
+  margin-bottom: 5px;
+}
+.portfolio-element-tags .text-bg-secondary {
+  color: #717171 !important;
+  background-color: #DBDBDB !important;
+}
+.portfolio-element-action {
+  margin-top: 45px;
 }/*# sourceMappingURL=primary-stylesheet.css.map */
