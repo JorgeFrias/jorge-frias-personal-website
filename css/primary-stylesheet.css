@@ -186,4 +186,10 @@ img.darken-image {
 .app-screens .clinical-information-text {
   padding-top: 50px;
   padding-bottom: 50px;
+}
+
+.closing-remark {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 800;
+  font-size: 40px;
 }/*# sourceMappingURL=primary-stylesheet.css.map */
