@@ -347,20 +347,27 @@ img.darken-image {
 
   // Texts
   h1 {
-    font-size: 60px;
+    font-size: 50px;
     font-weight: 900;
+    margin-bottom: 20px;
 
     @media (min-width: $screen-md) {
-      font-size: 70px;
+      font-size: 60px;
     }
   }
 
   p {
-    font-size: 20px;
+    font-size: 17px;
     font-weight: 600;
+    margin-bottom: 2px;
 
     @media (min-width: $screen-md) {
-      font-size: 27px;
+      font-size: 20px;
+    }
+    
+    &.location {
+      // font-weight: 300;
+      opacity: 0.5;
     }
   }
 
@@ -368,8 +375,7 @@ img.darken-image {
   p,
   h1 {
     // text-shadow: 0px 0px 15px #000000a0;
-    // color: #000000;
-    color: #fff;
+    color: rgb(0,0,0,0.8);
   }
 
   &-text {
@@ -377,7 +383,7 @@ img.darken-image {
     margin-bottom: 20px;
 
     // Blurred background
-    // background: rgba(255, 255, 255, 0.8);
+    // background: rgba(255, 255, 255, 0.5);
     // backdrop-filter: blur(5px);
     // padding: 40px 10px;
 
@@ -472,4 +478,20 @@ img.darken-image {
   &-image {
     margin-bottom: 8px;
   }
+}
+
+// Post-it
+.postit {
+  color:#000;
+  // background:#ffc;
+  background: rgb(255,255,204);
+  background: linear-gradient(189deg, rgba(255,255,204,1) 0%, rgba(238,238,164,1) 100%);
+  display:block;
+  margin: 20px;
+  padding:1em;
+  box-shadow: -2px 10px 8px rgba(33,33,33,.2);
+  
+  padding: 50px 30px;
+
+  transform: rotate(3deg);
 }
