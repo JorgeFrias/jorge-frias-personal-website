@@ -244,29 +244,44 @@ img.darken-image {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 90vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  min-height: 90vh;
   text-align: center;
   margin-top: 0;
+  overflow: hidden;
 }
-.header-composed * {
-  color: #000;
+.header-composed h1 {
+  font-size: 60px;
+  font-weight: 900;
+}
+@media (min-width: 992px) {
+  .header-composed h1 {
+    font-size: 70px;
+  }
 }
 .header-composed p {
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 600;
 }
-.header-composed .row {
-  height: 100%;
+@media (min-width: 992px) {
+  .header-composed p {
+    font-size: 27px;
+  }
+}
+.header-composed p,
+.header-composed h1 {
+  color: #fff;
 }
 .header-composed-text {
   margin-top: 70px;
   margin-bottom: 20px;
 }
+.header-composed-bust {
+  display: flex;
+  justify-content: center;
+}
 .header-composed-bust img {
-  max-width: 500px;
+  max-width: 150%;
+  width: 120%;
 }
 
 .portfolio-element {
@@ -306,7 +321,10 @@ img.darken-image {
 }
 .portfolio-element-tags .text-bg-secondary {
   color: #717171 !important;
-  background-color: #DBDBDB !important;
+  background-color: #dbdbdb !important;
+}
+.portfolio-element-tags .badge {
+  margin-bottom: 5px;
 }
 .portfolio-element-action {
   margin-top: 45px;

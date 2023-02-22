@@ -43,11 +43,10 @@ h1 {
   font-weight: 600;
   padding-top: 8px;
 
-    // For sizes smaller than md
-    @media (min-width: $screen-md) {
-      font-size: 22px;
-    }
-  
+  // For sizes smaller than md
+  @media (min-width: $screen-md) {
+    font-size: 22px;
+  }
 }
 
 h2 {
@@ -329,41 +328,70 @@ img.darken-image {
 // Index
 // - Header with image
 .header-composed {
+  // Background image
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 90vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+
+  // Alignment
+  min-height: 90vh;
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
   text-align: center;
 
   // Override margin
   margin-top: 0;
+  // Clip overlapping elements
+  overflow: hidden;
 
-  // High contrast text
-  * {
-    color: #000;
+  // Texts
+  h1 {
+    font-size: 60px;
+    font-weight: 900;
+
+    @media (min-width: $screen-md) {
+      font-size: 70px;
+    }
   }
 
   p {
-    font-size: 22px;
+    font-size: 20px;
     font-weight: 600;
+
+    @media (min-width: $screen-md) {
+      font-size: 27px;
+    }
   }
 
-  .row {
-    height: 100%;
+  // High contrast text
+  p,
+  h1 {
+    // text-shadow: 0px 0px 15px #000000a0;
+    // color: #000000;
+    color: #fff;
   }
 
   &-text {
     margin-top: 70px;
     margin-bottom: 20px;
+
+    // Blurred background
+    // background: rgba(255, 255, 255, 0.8);
+    // backdrop-filter: blur(5px);
+    // padding: 40px 10px;
+
+    // Text glow to inner components
+    // text-shadow: 0px 0px 15px #ffffff;
   }
 
   &-bust {
-    // height: 100%;
+    //center contents
+    display: flex;
+    justify-content: center;
     img {
-      max-width: 500px;
+      max-width: 150%;
+      width: 120%;
     }
   }
 }
@@ -374,7 +402,7 @@ img.darken-image {
 
   background-color: #fff;
   // Inner horizontal padding
-  padding: 0 ($portfolio-element-spacing * 2);  
+  padding: 0 ($portfolio-element-spacing * 2);
 
   &.row {
     .portfolio-element-main-image {
@@ -424,7 +452,10 @@ img.darken-image {
   &-tags {
     .text-bg-secondary {
       color: $text-color-secondary !important;
-      background-color: #DBDBDB !important;
+      background-color: #dbdbdb !important;
+    }
+    .badge {
+      margin-bottom: 5px;
     }
   }
 
@@ -434,7 +465,6 @@ img.darken-image {
 }
 
 .photo-gallery {
-
   [class^="col-"] {
     padding: 4px;
   }
@@ -442,5 +472,4 @@ img.darken-image {
   &-image {
     margin-bottom: 8px;
   }
-  
 }
