@@ -407,8 +407,12 @@ img.darken-image {
   $portfolio-element-spacing-reduced: 17px;
 
   background-color: #fff;
+  
   // Inner horizontal padding
-  padding: 0 ($portfolio-element-spacing * 2);
+  padding: 0 ($portfolio-element-spacing/2);
+  @media (min-width: $screen-md) {
+    padding: 0 ($portfolio-element-spacing * 2);
+  }
 
   &.row {
     .portfolio-element-main-image {

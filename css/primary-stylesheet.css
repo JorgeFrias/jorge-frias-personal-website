@@ -291,7 +291,12 @@ img.darken-image {
 
 .portfolio-element {
   background-color: #fff;
-  padding: 0 60px;
+  padding: 0 15px;
+}
+@media (min-width: 992px) {
+  .portfolio-element {
+    padding: 0 60px;
+  }
 }
 .portfolio-element.row .portfolio-element-main-image {
   max-width: 350px;
