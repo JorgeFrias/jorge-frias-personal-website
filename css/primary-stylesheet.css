@@ -250,7 +250,7 @@ img.darken-image {
   overflow: hidden;
 }
 .header-composed h1 {
-  font-size: 50px;
+  font-size: 40px;
   font-weight: 900;
   margin-bottom: 20px;
 }
@@ -260,7 +260,7 @@ img.darken-image {
   }
 }
 .header-composed p {
-  font-size: 17px;
+  font-size: 15px;
   font-weight: 600;
   margin-bottom: 2px;
 }
