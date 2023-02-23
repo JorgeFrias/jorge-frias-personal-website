@@ -299,11 +299,11 @@ img.darken-image {
   }
 }
 .portfolio-element.row .portfolio-element-main-image {
-  max-width: 350px;
+  max-width: 400px;
   margin: 0 auto;
 }
 .portfolio-element.row .portfolio-element-main-image img {
-  margin-top: 50px;
+  margin-top: 30px;
 }
 .portfolio-element-text {
   padding: 60px 0;
