@@ -334,10 +334,6 @@ img.darken-image {
   background-repeat: no-repeat;
 
   // Alignment
-  min-height: 90vh;
-  // display: flex;
-  // justify-content: center;
-  // align-items: center;
   text-align: center;
 
   // Override margin
@@ -347,7 +343,7 @@ img.darken-image {
 
   // Texts
   h1 {
-    font-size: 50px;
+    font-size: 55px;
     font-weight: 900;
     margin-bottom: 10px;
 
@@ -371,21 +367,12 @@ img.darken-image {
     }
   }
 
-  // ' High contrast text
-  p,
-  h1 {
-    // text-shadow: 0px 0px 15px #000000a0;
-    color: rgb(0, 0, 0);
-  }
-
   &-text {
-    // Blurred background
-    // background: rgba(255, 255, 255, 0.5);
-    // backdrop-filter: blur(5px);
-    // padding: 40px 10px;
-
-    // Text glow to inner components
-    // text-shadow: 0px 0px 15px #ffffff;
+    // High contrast text
+    p,
+    h1 {
+      color: rgb(0, 0, 0);
+    }
 
     .blend-gradient {
       // Add a gradient to the background
@@ -397,7 +384,10 @@ img.darken-image {
       );
 
       // Add space for the gradient to breathe
-      padding: 70px;
+      padding: 40px 20px 40px 20px;
+      @media (min-width: $screen-md) {
+        padding: 70px;
+      }
     }
   }
 
@@ -407,6 +397,7 @@ img.darken-image {
     justify-content: center;
     img {
       max-width: 150%;
+      max-height: 50vh;
       width: 120%;
     }
   }
