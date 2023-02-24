@@ -449,6 +449,7 @@ img.darken-image {
     h3 {
       color: #000;
       font-size: 35px;
+      margin: 0;
     }
   }
 
@@ -471,7 +472,11 @@ img.darken-image {
   }
 
   &-action {
-    margin-top: $portfolio-element-spacing * 1.5;
+    margin-top: $portfolio-element-spacing * 1.5 - 15px;    // 15px is the margin of the button element
+
+    > * {
+      margin-top: 15px;
+    }
   }
 }
 
