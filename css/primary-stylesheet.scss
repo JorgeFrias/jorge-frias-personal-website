@@ -399,6 +399,8 @@ img.darken-image {
       max-width: 150%;
       max-height: 50vh;
       width: 120%;
+      // Preserve image aspect ratio
+      object-fit: contain;
     }
   }
 }
@@ -410,7 +412,7 @@ img.darken-image {
   background-color: #fff;
 
   // Inner horizontal padding
-  padding: 0 ($portfolio-element-spacing/2);
+  padding: 0 calc($portfolio-element-spacing / 2);
   @media (min-width: $screen-md) {
     padding: 0 ($portfolio-element-spacing * 2);
   }
