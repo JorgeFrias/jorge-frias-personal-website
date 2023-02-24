@@ -347,41 +347,38 @@ img.darken-image {
 
   // Texts
   h1 {
-    font-size: 40px;
+    font-size: 50px;
     font-weight: 900;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 
     @media (min-width: $screen-md) {
-      font-size: 60px;
+      font-size: 70px;
     }
   }
 
   p {
-    font-size: 15px;
+    font-size: 20px;
     font-weight: 600;
     margin-bottom: 2px;
 
     @media (min-width: $screen-md) {
-      font-size: 20px;
+      font-size: 25px;
     }
-    
+
     &.location {
       // font-weight: 300;
       opacity: 0.5;
     }
   }
 
-  // High contrast text
+  // ' High contrast text
   p,
   h1 {
     // text-shadow: 0px 0px 15px #000000a0;
-    color: rgb(0,0,0,0.8);
+    color: rgb(0, 0, 0);
   }
 
   &-text {
-    margin-top: 70px;
-    margin-bottom: 20px;
-
     // Blurred background
     // background: rgba(255, 255, 255, 0.5);
     // backdrop-filter: blur(5px);
@@ -389,6 +386,19 @@ img.darken-image {
 
     // Text glow to inner components
     // text-shadow: 0px 0px 15px #ffffff;
+
+    .blend-gradient {
+      // Add a gradient to the background
+      background: radial-gradient(
+        closest-side,
+        rgba(245, 245, 245, 1) 0%,
+        rgba(245, 245, 245, 0.85) 80%,
+        transparent 100%
+      );
+
+      // Add space for the gradient to breathe
+      padding: 70px;
+    }
   }
 
   &-bust {
@@ -407,7 +417,7 @@ img.darken-image {
   $portfolio-element-spacing-reduced: 17px;
 
   background-color: #fff;
-  
+
   // Inner horizontal padding
   padding: 0 ($portfolio-element-spacing/2);
   @media (min-width: $screen-md) {
@@ -482,20 +492,4 @@ img.darken-image {
   &-image {
     margin-bottom: 8px;
   }
-}
-
-// Post-it
-.postit {
-  color:#000;
-  // background:#ffc;
-  background: rgb(255,255,204);
-  background: linear-gradient(190deg, rgba(255,237,158,1) 0%, rgba(234,212,115,1) 100%);
-  display:block;
-  margin: 20px;
-  padding:1em;
-  box-shadow: -5px 8px 5px -2px rgba(0,0,0,.3);
-  
-  padding: 50px 30px;
-
-  transform: rotate(3deg);
 }
