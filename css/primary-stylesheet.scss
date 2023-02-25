@@ -124,6 +124,10 @@ ul {
   img {
     width: 100%;
   }
+  // - Video
+  video {
+    width: 100%;
+  }
 }
 
 .row {
@@ -256,6 +260,14 @@ img.narrow-image {
 
 img.darken-image {
   filter: brightness(0.3);
+}
+
+.device-screenshot {
+  max-width: 60vw;
+
+  &.device-corner {
+    border-radius: 25px;
+  }
 }
 
 // - App Screens
@@ -474,7 +486,7 @@ img.darken-image {
   }
 
   &-action {
-    margin-top: $portfolio-element-spacing * 1.5 - 15px;    // 15px is the margin of the button element
+    margin-top: $portfolio-element-spacing * 1.5 - 15px; // 15px is the margin of the button element
 
     > * {
       margin-top: 15px;
