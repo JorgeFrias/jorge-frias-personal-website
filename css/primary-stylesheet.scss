@@ -43,7 +43,6 @@ h1 {
   font-weight: 600;
   padding-top: 8px;
 
-  // For sizes smaller than md
   @media (min-width: $screen-md) {
     font-size: 22px;
   }
