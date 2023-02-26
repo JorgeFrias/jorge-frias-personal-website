@@ -5,7 +5,9 @@ $screen-md: 992px;
 $screen-lg: 1200px;
 // Layout
 $element-corner-radius: 15px;
-$card-padding: 25px;
+$card-padding: 15px;
+$card-padding-md: 25px;
+
 $column-padding: 2.5px;
 $button-height: 100px;
 // Color
@@ -17,10 +19,16 @@ $text-color-secondary: #717171;
   font-variation-settings: "FILL" 0, "wght" 500, "GRAD" 200, "opsz" 24;
 }
 
+body {
+  padding: 0;
+}
+
 .container-fluid {
   margin-top: 50px;
+  margin-bottom: 50px;
   @media (min-width: $screen-sm) {
     margin-top: 150px;
+    margin-bottom: 150px;
   }
 }
 
@@ -35,12 +43,21 @@ $text-color-secondary: #717171;
 
   // - Design
   background-color: #ffffff;
-  padding-top: $card-padding - calc($column-padding * 4); // Compensates the padding of the row
+  // - Paddings
+  padding-top: $card-padding - calc($column-padding * 2) - calc($column-padding * 2); // Compensates the padding of the row
+  padding-bottom: $card-padding - calc($column-padding * 2) - $column-padding;
   padding-right: $card-padding - calc($column-padding * 2);
-  padding-bottom: $card-padding - calc($column-padding * 2);
   padding-left: $card-padding - calc($column-padding * 2);
+  @media (min-width: $screen-sm) {
+    padding-top: $card-padding-md - calc($column-padding * 2) - calc($column-padding * 2); // Compensates the padding of the row
+    padding-bottom: $card-padding-md - calc($column-padding * 2) - $column-padding;
+    padding-right: $card-padding-md - calc($column-padding * 2);
+    padding-left: $card-padding-md - calc($column-padding * 2);
+  }
+
+  // - Border radius
   border-radius: $element-corner-radius + calc($column-padding * 2);
-  // Shadow
+  // - Shadow
   box-shadow: 0px 2px 40px 0px rgba(0, 0, 0, 0.2);
 
   // - Layout
@@ -141,6 +158,9 @@ $text-color-secondary: #717171;
     border-radius: $element-corner-radius;
     background-color: $background-color;
     padding: $element-corner-radius;
+
+    margin-top: $column-padding;
+    margin-bottom: $column-padding;
 
     &-row.row {
       margin-top: 30px;
