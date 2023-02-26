@@ -26,7 +26,7 @@ $text-color-secondary: #717171;
 .container-card {
   // - Sizing
   width: 95%;
-  height: 100vh;
+  //   height: 100vh;
   @media (min-width: $screen-sm) {
     width: 500px;
     height: auto;
@@ -134,4 +134,8 @@ $text-color-secondary: #717171;
       }
     }
   }
+}
+
+.container-logo {
+  margin-top: 50px;
 }
