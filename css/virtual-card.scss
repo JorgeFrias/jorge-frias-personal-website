@@ -1,0 +1,93 @@
+// Bootstrap breakpoints definitions
+$screen-xs: 480px;
+$screen-sm: 768px;
+$screen-md: 992px;
+$screen-lg: 1200px;
+// Layout
+$element-corner-radius: 15px;
+$card-padding: 25px;
+$column-padding: 2.5px;
+// Color
+$text-color-secondary: #717171;
+
+// Google fonts icons
+.material-symbols-rounded {
+  font-variation-settings: "FILL" 0, "wght" 500, "GRAD" 200, "opsz" 24;
+}
+
+.container-card {
+  // - Sizing
+  width: 100%;
+  @media (min-width: $screen-sm) {
+    width: 500px;
+  }
+
+  // - Design
+  background-color: #ffffff;
+  padding-top: $card-padding - calc($column-padding * 4);   // Compensates the padding of the row
+  padding-right: $card-padding - calc($column-padding * 2);
+  padding-bottom: $card-padding - calc($column-padding * 2);
+  padding-left: $card-padding - calc($column-padding * 2);
+  border-radius: $element-corner-radius + calc($column-padding * 2);
+  // Shadow
+  box-shadow: 0px 2px 25px -4px rgba(0,0,0,0.2);
+
+  // - Layout
+  .row {
+    margin-top: calc($column-padding * 2);
+    margin-bottom: 0;
+
+    [class^="col-"] {
+      padding-right: $column-padding;
+      padding-left: $column-padding;
+    }
+  }
+
+  // Contents
+  &-portrait {
+    img {
+      //image with border radius
+      border-radius: $element-corner-radius;
+      width: 100%;
+    }
+  }
+
+  &-heading {
+    padding-left: 10px;
+
+    h1 {
+      font-size: 45px;
+      margin-bottom: 0;
+    }
+
+    p {
+        font-size: 15px;
+        font-family: 'Source Code Pro', monospace;
+        color: $text-color-secondary;
+        margin-top: 0;
+    }
+  }
+
+  &-button {
+    > .btn {
+      height: 100px;
+      width: 100%;
+      background-color: #000000;
+      border-radius: $element-corner-radius;
+
+      // Align content leading
+      text-align: start;
+      // Content to the bottom
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      // Padding
+      padding-bottom: calc($element-corner-radius/2);
+      padding-left: $element-corner-radius;
+
+      * {
+        padding-top: 5px;
+      }
+    }
+  }
+}

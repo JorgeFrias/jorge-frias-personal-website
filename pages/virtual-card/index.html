@@ -3,7 +3,10 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no"
+    />
     <title>Jorge Frias Virtual Card</title>
 
     <!-- Import open sans -->
@@ -26,9 +29,53 @@
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
       crossorigin="anonymous"
     ></script>
+    <link rel="stylesheet" href="/css/primary-stylesheet.min.css" />
+    <link rel="stylesheet" href="/css/virtual-card.min.css" />
+    <!-- Google Fonts Icons -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
   </head>
   <body>
-    <h1>Virtual Card</h1>
-    <p>Virtual Card</p>
+    <div class="container-fluid container-card">
+      <div class="row">
+        <div class="col-6">
+          <div class="container-card-portrait">
+            <!-- image -->
+            <img
+              src="./img/jorge-heading-composed.jpg"
+              alt="Jorge Frias portrait"
+            />
+          </div>
+        </div>
+        <div class="col-6 d-flex align-items-center">
+          <div class="container-card-heading">
+            <h1>Jorge Frias</h1>
+            <p>EN/ES</p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <!-- Button Component - Double Height -->
+        <div class="col-6">
+          <div class="container-card-button">
+            <!-- TODO: obfuscate email -->
+            <a href="#" class="btn btn-dark">
+              <span class="material-symbols-rounded"> mail </span>
+              <span>Mail me</span>
+            </a>
+          </div>
+        </div>
+        <!-- Button Component - Double Height -->
+        <div class="col-6">
+          <div class="container-card-button">
+            <a href="https://www.jorgefrias.eu" target="_blank" class="btn btn-dark">
+              <span class="material-symbols-rounded"> language </span>
+              <span>Website</span>
+            </a>
+          </div>
+      </div>
+    </div>
   </body>
 </html>
