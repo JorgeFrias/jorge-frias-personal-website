@@ -7,6 +7,7 @@ $screen-lg: 1200px;
 $element-corner-radius: 15px;
 $card-padding: 25px;
 $column-padding: 2.5px;
+$button-height: 100px;
 // Color
 $text-color-secondary: #717171;
 
@@ -24,13 +25,13 @@ $text-color-secondary: #717171;
 
   // - Design
   background-color: #ffffff;
-  padding-top: $card-padding - calc($column-padding * 4);   // Compensates the padding of the row
+  padding-top: $card-padding - calc($column-padding * 4); // Compensates the padding of the row
   padding-right: $card-padding - calc($column-padding * 2);
   padding-bottom: $card-padding - calc($column-padding * 2);
   padding-left: $card-padding - calc($column-padding * 2);
   border-radius: $element-corner-radius + calc($column-padding * 2);
   // Shadow
-  box-shadow: 0px 2px 25px -4px rgba(0,0,0,0.2);
+  box-shadow: 0px 2px 25px -4px rgba(0, 0, 0, 0.2);
 
   // - Layout
   .row {
@@ -61,26 +62,54 @@ $text-color-secondary: #717171;
     }
 
     p {
-        font-size: 15px;
-        font-family: 'Source Code Pro', monospace;
-        color: $text-color-secondary;
-        margin-top: 0;
+      font-size: 15px;
+      font-family: "Source Code Pro", monospace;
+      color: $text-color-secondary;
+      margin-top: 0;
     }
   }
 
   &-button {
     > .btn {
-      height: 100px;
+      &.btn-double {
+        height: $button-height;
+        // Align content bottom
+        justify-content: flex-end;
+      }
+
+      &.btn-single {
+        height: calc($button-height / 2);
+        // Align content center
+        justify-content: center;
+        // Display contents inline
+        display: inline-flex;
+        > div {
+          padding-top: 0;
+          // Align content center
+          display: flex;
+          align-items: center;
+
+          :first-child {
+            // This is the icon
+            padding-top: 0;
+            margin-right: 10px;
+          }
+          :last-child {
+            // This is the label
+            padding-top: 3px;
+          }
+        }
+      }
+
       width: 100%;
       background-color: #000000;
       border-radius: $element-corner-radius;
 
       // Align content leading
       text-align: start;
-      // Content to the bottom
+      // Content alignment
       display: flex;
       flex-direction: column;
-      justify-content: flex-end;
       // Padding
       padding-bottom: calc($element-corner-radius/2);
       padding-left: $element-corner-radius;
