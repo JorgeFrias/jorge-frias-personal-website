@@ -45,12 +45,12 @@ body {
   background-color: #ffffff;
   // - Paddings
   padding-top: $card-padding - calc($column-padding * 2); // Compensates the padding of the row
-  padding-bottom: $card-padding - calc($column-padding);
+  padding-bottom: $card-padding - calc($column-padding);  // Compensates the padding of the last col
   padding-right: $card-padding - calc($column-padding);
   padding-left: $card-padding - calc($column-padding);
   @media (min-width: $screen-sm) {
     padding-top: $card-padding-md - calc($column-padding * 2); // Compensates the padding of the row
-    padding-bottom: $card-padding-md - calc($column-padding);
+    padding-bottom: $card-padding-md - calc($column-padding);  // Compensates the padding of the last col
     padding-right: $card-padding-md - calc($column-padding);
     padding-left: $card-padding-md - calc($column-padding);
   }
