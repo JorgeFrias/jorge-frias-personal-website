@@ -9,6 +9,7 @@ $card-padding: 25px;
 $column-padding: 2.5px;
 $button-height: 100px;
 // Color
+$background-color: #f5f5f5;
 $text-color-secondary: #717171;
 
 // Google fonts icons
@@ -79,6 +80,7 @@ $text-color-secondary: #717171;
     p {
       font-size: 15px;
       font-family: "Source Code Pro", monospace;
+      font-weight: 500;
       color: $text-color-secondary;
       margin-top: 0;
     }
@@ -132,6 +134,47 @@ $text-color-secondary: #717171;
       * {
         padding-top: 5px;
       }
+    }
+  }
+
+  &-app {
+    border-radius: $element-corner-radius;
+    background-color: $background-color;
+    padding: $element-corner-radius;
+
+    &-row.row {
+      margin-top: 30px;
+    }
+
+    img {
+      width: 60px;
+      height: 60px;
+      border-radius: 14px;
+    }
+
+    // - Text
+    &-name {
+      margin-left: 12px;
+
+      h2 {
+        font-size: 20px;
+        font-family: "Source Code Pro", monospace;
+        font-weight: 700;
+      }
+      h2,
+      p {
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+
+      p {
+        color: $text-color-secondary;
+        font-size: 15px;
+      }
+    }
+
+    &-action {
+      margin-top: 12px;
     }
   }
 }
