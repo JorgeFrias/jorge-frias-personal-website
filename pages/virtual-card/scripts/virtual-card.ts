@@ -72,4 +72,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
   // Set email and phone
   document.getElementById("email").innerHTML = email;
   document.getElementById("phone").innerHTML = phone;
+  // Change href
+    document.getElementById("email-button").setAttribute("href", "mailto:" + email);
 });
