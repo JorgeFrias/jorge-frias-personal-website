@@ -125,6 +125,10 @@ body {
         @media (min-width: $screen-sm) {
             font-size: 20px;
         }
+
+        :first-child {
+          color: $text-color-secondary;
+        }
     }
     
   }
