@@ -7,6 +7,7 @@ $screen-lg: 1200px;
 $element-corner-radius: 15px;
 $card-padding: 15px;
 $card-padding-md: 25px;
+$section-spacing: 30px;
 
 $column-padding: 2.5px;
 $button-height: 100px;
@@ -45,12 +46,12 @@ body {
   background-color: #ffffff;
   // - Paddings
   padding-top: $card-padding - calc($column-padding * 2); // Compensates the padding of the row
-  padding-bottom: $card-padding - calc($column-padding);  // Compensates the padding of the last col
+  padding-bottom: $card-padding - calc($column-padding); // Compensates the padding of the last col
   padding-right: $card-padding - calc($column-padding);
   padding-left: $card-padding - calc($column-padding);
   @media (min-width: $screen-sm) {
     padding-top: $card-padding-md - calc($column-padding * 2); // Compensates the padding of the row
-    padding-bottom: $card-padding-md - calc($column-padding);  // Compensates the padding of the last col
+    padding-bottom: $card-padding-md - calc($column-padding); // Compensates the padding of the last col
     padding-right: $card-padding-md - calc($column-padding);
     padding-left: $card-padding-md - calc($column-padding);
   }
@@ -100,7 +101,32 @@ body {
       font-weight: 500;
       color: $text-color-secondary;
       margin-top: 0;
+      margin-bottom: 0;
     }
+
+    &-info {    
+        margin-top: 15px;
+      > * {
+        margin-bottom: 3px;
+      }
+    }
+  }
+
+  &-extended-information {
+    margin-left: $element-corner-radius;
+    margin-top: $section-spacing;
+    margin-bottom: $section-spacing;
+
+    p {
+        font-family: 'source-code-pro', monospace;
+        margin-bottom: 3px;
+
+        // font-size: 15px;
+        @media (min-width: $screen-sm) {
+            font-size: 20px;
+        }
+    }
+    
   }
 
   &-button {
@@ -130,7 +156,7 @@ body {
           }
           :last-child {
             // This is the label
-            padding-top: 3px;
+            padding-top: 1px;
           }
         }
       }
@@ -151,6 +177,15 @@ body {
       * {
         padding-top: 5px;
       }
+
+      .material-symbols-custom {
+        // Svg icon color
+        fill: #ffffff;
+        color: #ffffff;
+        // Svg icon size
+        width: 25px;
+        height: 25px;
+      }
     }
   }
 
@@ -163,7 +198,7 @@ body {
     margin-bottom: $column-padding;
 
     &-row.row {
-      margin-top: 30px;
+      margin-top: $section-spacing;
     }
 
     img {
