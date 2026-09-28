@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /pages/virtual-card/
+Disallow: /downloads/
+
+Sitemap: https://jorgefrias.eu/sitemap.xml
