@@ -77,6 +77,9 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="/css/primary-stylesheet.min.css" />
+    <script>
+      document.documentElement.classList.add('js-enabled');
+    </script>
     <!-- Google tag (gtag.js) -->
     <script
       async
@@ -165,7 +168,7 @@
     <!-- Section with paragraph and title: Portfolio -->
     <div class="container-fluid container-wide">
       <!-- Section heading -->
-      <div class="row container-narrow">
+      <div class="row container-narrow portfolio-heading-reveal">
         <div class="col-12">
           <div class="text-center">
             <h1>Product Design Portfolio</h1>
@@ -463,5 +466,6 @@
         </div>
       </div>
     </div>
+    <script src="./scripts/portfolio-animations.js" defer></script>
   </body>
 </html>
